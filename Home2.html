@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi Cokina - Rab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .navbar-nav .nav-item {
+        margin-left: 20px;
+      }
+      .language-selector {
+        margin-left: auto;
+      }
+      .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        background-size: cover;
+      }
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .vehicle-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .contact-btn {
+        background-color: #25d366;
+        color: white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+      }
+      .contact-btn:hover {
+        background-color: #1da851;
+      }
+      .topbar {
+        background-color: #343a40;
+        color: white;
+        padding: 5px 0;
+      }
+      .topbar .contact-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .topbar .contact-info span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+      }
+      footer p {
+        margin: 0;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .bg-light {
+        background-color: #f8f9fa !important;
+      }
+      .text-center {
+        text-align: center !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div class="contact-info">
+          <span
+            ><img src="telephone.svg" alt="Phone" class="icon" /> +385 91 123
+            4567</span
+          >
+          <span
+            ><img src="telephone.svg" alt="Phone" class="icon" /> +385 98 765
+            4321</span
+          >
+          <span
+            ><img src="envelope.svg" alt="Email" class="icon" />
+            info@taxicokina.com</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Taxi Cokina</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vehicles">Vehicles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#transfers">Transfers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trips">Day Trips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="language-selector">
+            <select class="form-select" aria-label="Language selector">
+              <option value="en">English</option>
+              <option value="hr">Hrvatski</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div
+          class="carousel-item active"
+          style="
+            background-image: url('https://lando.hr/wp-content/uploads/2021/03/Lando-Otok-Rab.jpg');
+          "
+        >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to Taxi Cokina</h5>
+            <p>Reliable and comfortable taxi service on Rab</p>
+            <a class="btn btn-primary btn-lg" href="#contact" role="button"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('https://tellusdmsmedia.newmindmedia.com/wsimgs/Private-Driver_3_c_Private_Driver_497755115.jpg');
+          "
+        >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Comfortable Rides</h5>
+            <p>Experience the best in comfort and convenience</p>
+            <a class="btn btn-primary btn-lg" href="#vehicles" role="button"
+              >Our Vehicles</a
+            >
+          </div>
+        </div>
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('https://www.kingdom-limousines.com/wp-content/uploads/2020/10/chauffeur-service-Cote-Azur-Kingdom-Limousines-bg-1024x687.jpg');
+          "
+        >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore Rab</h5>
+            <p>Discover the beauty of Rab with our day trips</p>
+            <a class="btn btn-primary btn-lg" href="#trips" role="button"
+              >Day Trips</a
+            >
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">About Us</h2>
+        <p class="text-center">
+          Taxi Cokina is a leading taxi service provider on Rab, dedicated to
+          offering reliable and comfortable transportation solutions. Our team
+          of professional drivers is committed to ensuring your safety and
+          satisfaction.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="vehicles" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Our Vehicles</h2>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <img src="https://www.supercars.net/blog/wp-content/uploads/2016/03/2015_BMW_M4GTS-4-1536.jpg" alt="Vehicle 1" class="vehicle-img" />
+            <h4 class="mt-3 text-center">Sedan</h4>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="https://www.auto-data.net/images/f9/BMW-5-Series-Touring-F11.jpg"
+              alt="Vehicle 2"
+              class="vehicle-img"
+            />
+            <h4 class="mt-3 text-center">SUV</h4>
+          </div>
+          <div class="col-md-4">
+            <img src="https://www.motortrend.com/uploads/sites/21/2019/11/003-polly-1970-chevrolet-camaro-z28-front-three-quarter-driving.jpg" alt="Vehicle 3" class="vehicle-img" />
+            <h4 class="mt-3 text-center">Van</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transfers Section -->
+    <section id="transfers" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">Transfers</h2>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h3>Airport Transfers</h3>
+            <p>
+              We offer comfortable and reliable airport transfers to and from
+              Rab. Our professional drivers ensure a smooth and safe journey,
+              making your travel experience hassle-free.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>City Transfers</h3>
+            <p>
+              We provide city transfers within Rab, ensuring you reach your
+              destination promptly and comfortably. Whether it's a business
+              meeting or a night out, we've got you covered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day Trips Section -->
+    <section id="trips" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Day Trips</h2>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h3>Out of Island Trips</h3>
+            <p>
+              Explore the beauty of Croatia with our out of island trips. Visit
+              the stunning Plitvicka jezera and other picturesque locations with
+              our experienced guides.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3>Island Tours</h3>
+            <p>
+              Discover the hidden gems of Rab with our island tours. Enjoy
+              breathtaking views and unique experiences with our knowledgeable
+              local guides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title text-center">Contact Us</h2>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h3>Contact Information</h3>
+            <p>Phone: +385 91 123 4567</p>
+            <p>Phone: +385 98 765 4321</p>
+            <p>Email: info@taxicokina.com</p>
+            <a href="https://wa.me/385911234567" class="btn contact-btn"
+              >Contact on WhatsApp</a
+            >
+          </div>
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 text-center">
+      <div class="container">
+        <p>&copy; 2024 Taxi Cokina. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Add Bootstrap JS scripts here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
